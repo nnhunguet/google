@@ -1,38 +1,85 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App svg {
+  width: 20px;
+  height: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .header {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .header p {
+  margin: 25px 20px;
+  color: #888;
+}
+
+.App .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-grow: 1;
+  padding: 120px 0px
 }
 
-.App-link {
-  color: #61dafb;
+.App .wrap-input {
+  border: 1px solid #eee;
+  padding: 0px 5px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .wrap-input input{
+  width: 400px;
+  height: 25px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  margin-left: 4px;
+  color: #5F6368;
+}
+
+.App input:focus .wrap-input{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.App .option {
+  display: flex;
+}
+
+.App .option p{
+  margin: 20px 10px;
+  background-color: #f2f2f2;
+  color: #5F6368;
+  border: 1px solid #f2f2f2;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.App .d-flex, .App .wrap-ul {
+  display: flex;
+}
+.App .d-flex {
+  padding:0px 5px;
+  margin: 6px 0px;
+}
+
+.App .wrap-ul {
+  justify-content: space-between;
+  background-color: #eee;
+  margin-top: 30px;
+}
+
+.App .wrap-ul li {
+  list-style: none;
+  margin: 0 8px;
 }
